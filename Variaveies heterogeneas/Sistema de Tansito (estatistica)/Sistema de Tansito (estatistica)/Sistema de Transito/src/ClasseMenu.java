@@ -1,5 +1,6 @@
 import javax.swing.*;
 class ClasseMenu {
+
     public static void main (String[] args) {
         Estatistica[] estatistica = new Estatistica[3];
         ClasseMetodos m = new ClasseMetodos();
