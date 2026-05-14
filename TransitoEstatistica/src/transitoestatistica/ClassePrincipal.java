@@ -11,13 +11,11 @@ import javax.swing.*;
  * @author Tayna
  */
 public class ClassePrincipal {
-
-  
     public static void main (String[] args) throws IOException {
-        Estatistica[] estatistica = new Estatistica[3];
+        Estatistica[] estatistica = new Estatistica[10];
         ClasseMetodos m = new ClasseMetodos();
         int i;
-        for(i = 0; i<3; i++){
+        for(i = 0; i<10; i++){
             estatistica[i] = new Estatistica() {};
         }
         int opc = 0;

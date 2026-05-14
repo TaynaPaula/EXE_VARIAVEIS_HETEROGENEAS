@@ -15,26 +15,26 @@ class ClasseMetodos {
     public Estatistica[] FCADRASTRAESTATISTICA(Estatistica[] estatistica) throws IOException{
         int i; String fileName = "ArquivoEstatistica.txt";
         BufferedWriter gravar = new BufferedWriter(new FileWriter( fileName ));
-        for(i=0; i<3; i++){ estatistica[i] = new Estatistica() {}; }
-        for(i=0;i<3;i++){
+        for(i=0;i<10;i++){
         estatistica[i].CodigoCidade=Integer.parseInt(JOptionPane.showInputDialog("Entre o codigo da cidade"));
         gravar.write(Integer.toString(estatistica[i].CodigoCidade)); gravar.newLine();
-        estatistica[i].NomeCidade=JOptionPane.showInputDialog("Informe o nom eda cidade");
+        estatistica[i].NomeCidade=JOptionPane.showInputDialog("Informe o nome da cidade ");
         gravar.write(estatistica[i].NomeCidade); gravar.newLine();
-        estatistica[i].QtdAcidentes=Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de acidentes"));
+        estatistica[i].QtdAcidentes=Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de acidentes "));
         gravar.write(Integer.toString(estatistica[i].QtdAcidentes)); gravar.newLine();
-        }System.out.println("GRAVAÇÃO FEITA COM SUCESSO \n Estastisticas salvadas com sucesso");
+        }System.out.println("GRAVAÇÃO FEITA COM SUCESSO \n Estastisticas salvadas com sucesso ");
+        System.out.println("-------------");
         gravar.close(); return estatistica;
     }
     
     public void PQTDACIDENTES(Estatistica[] estatistica){
-      for (int i = 0 ; i < 3; i++) 
+      for (int i = 0 ; i < 10; i++) 
         {
             if(estatistica[i].QtdAcidentes>100&&estatistica[i].QtdAcidentes<500){
             System.out.println("\ncodigo:  "+estatistica[i].CodigoCidade + "\n pontos: "
-                + estatistica[i].NomeCidade +"\nAcidentes:"+ estatistica[i].QtdAcidentes);
+                + estatistica[i].NomeCidade +"\nAcidentes: "+ estatistica[i].QtdAcidentes);
           }
-        }
+        } System.out.println("-------------");
     }
 
     public void PMAIORMENOR(Estatistica[] estatistica){
@@ -51,6 +51,7 @@ class ClasseMetodos {
       }
      System.out.println("\nCódigo: " + estatistica[maior].CodigoCidade + "Nome: " + estatistica[maior].NomeCidade + "Quantidade: " + estatistica[maior].QtdAcidentes);
      System.out.println("\nCódigo: " + estatistica[menor].CodigoCidade + "Nome: " + estatistica[menor].NomeCidade + "Quantidade: " + estatistica[menor].QtdAcidentes);
+     System.out.println("-------------");
     }
 
     public void PACIMA (Estatistica[] estatistica) {
@@ -62,21 +63,23 @@ class ClasseMetodos {
      double media = soma / estatistica.length;
      for (int i = 0; i < estatistica.length; i++) {
         if (estatistica[i].QtdAcidentes > media) {
-          System.out.println("\ncodigo:  " + estatistica[i].CodigoCidade + "\n pontos: "
-              + estatistica[i].NomeCidade + "\nAcidentes:" + estatistica[i].QtdAcidentes);
+          System.out.println("\n codigo:  " + estatistica[i].CodigoCidade + "\n pontos: "
+              + estatistica[i].NomeCidade + "\n Acidentes: " + estatistica[i].QtdAcidentes);
+          
         }
       }
      System.out.println("\nMédia do vetor = " + media);
+     System.out.println("-------------");
 
     } 
     public void LerEstatistica(Estatistica[] estatistica) throws IOException {
         int i;
         String fileName = "ArquivoEstatistica.txt";
         BufferedReader ler = new BufferedReader(new FileReader( fileName ));
-        for (i = 0 ; i < 3 ; i++)   {
+        for (i = 0 ; i < 10 ; i++)   {
              estatistica[i] = new Estatistica() {};
         }
-        for(i=0; i<3;i++){
+        for(i=0; i<10;i++){
            estatistica[i].CodigoCidade = Integer.parseInt(ler.readLine()); 
            estatistica[i].NomeCidade = ler.readLine();
            estatistica[i].QtdAcidentes = Integer.parseInt(ler.readLine()); 
