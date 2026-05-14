@@ -50,15 +50,18 @@ public class ClasseMetodos {
     JOptionPane.showMessageDialog(null, "Dados Classificados!");
     return votacao;
     }
-    
-    public void QtEleitoresSecao(){
-        
-    }
-    
-    public void SecaoMaiorMenor(){
-    }
-    
-    private static void QtVotosCandidato(Votacao2021[] votacao) {
+
+    void QtEleitoresSecao(Votacao2021[] votacao) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    void SecaoMaiorMenor(Votacao2021[] votacao) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    void QtVotosCandidato(Votacao2021[] votacao) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    
 }

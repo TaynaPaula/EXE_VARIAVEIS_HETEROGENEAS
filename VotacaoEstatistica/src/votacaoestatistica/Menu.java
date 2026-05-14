@@ -51,21 +51,20 @@ public class Menu {
     
     public static void MenuIndicadores(Votacao2021[] votacao) {
         int Opc=0;
+        ClasseMetodos m = new ClasseMetodos() {};
+      
         while (Opc!=9)
         {
             Opc= Integer.parseInt(JOptionPane.showInputDialog("\nEstatísticas de Votação em 2021 \n 1 – Quantidade Eleitores por Seção \n 2 – Seção com Maior e Menor número de Eleitores \n 3 – Quantidade de votos por candidato \n 4 – 10 primeiros colocadas (nro cand. e qtd votos) \n9 – Finaliza consulta "));
             switch (Opc){
                 case 1:
-                    QtEleitoresSecao(votacao);
+                    m.QtEleitoresSecao(votacao);
                     break;
                 case 2:
-                    SecaoMaiorMenor(votacao);
+                    m.SecaoMaiorMenor(votacao);
                     break;
                 case 3:
-                    QtVotosCandidato(votacao);
-                    break;
-                case 4:
-                    MenuIndicadores(votacao);
+                    m.QtVotosCandidato(votacao);
                     break;
                 case 9:
                     JOptionPane.showMessageDialog(null,"Finalizado");
@@ -76,6 +75,10 @@ public class Menu {
         }
         
     }
+
+    
+
+   
 
     
 }
