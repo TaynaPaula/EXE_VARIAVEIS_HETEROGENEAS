@@ -11,7 +11,6 @@ package votacaoestatistica;
  abstract class Votacao2021 {
   int numeroSecao;  
   int numeroCandidato;
-
   Votacao2021(){
       this(0,0);
   }

@@ -68,7 +68,7 @@ class ClasseMetodos {
           
         }
       }
-     System.out.println("\n Média do vetor = " + media);
+     System.out.println("\nMédia do vetor = " + media);
      System.out.println("-------------");
 
     } 

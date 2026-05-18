@@ -17,15 +17,15 @@ public class Menu {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        Votacao2021[] votacao = new Votacao2021[200];
+        Votacao2021[] votacao = new Votacao2021[2];
         ClasseMetodos m = new ClasseMetodos();
         int Opc = 0;
-        for(int i = 0; i<200; i++){
+        for(int i = 0; i<2; i++){
             votacao[i] = new Votacao2021() {};
         }
         while (Opc!=9)
         {
-            Opc = Integer.parseInt(JOptionPane.showInputDialog("1 - Carregar Seção/Número Eleitor  \n 2 - Classificar por secao \n 3- gravar Registros \n 4 - Mostrar Indicadores \n 9 - Finaliza "));
+            Opc = Integer.parseInt(JOptionPane.showInputDialog("1 - Carregar Seção/Número Eleitor  \n 2 - Classificar por secao \n 3- gravar Registros \\n 4 - Mostrar Indicadores \\n 9 - Finaliza "));
             switch(Opc){
                 case 1:
                     votacao = m.FCADRASTRAVOTAÇÃO(votacao);
@@ -49,10 +49,10 @@ public class Menu {
         
     }
     
-    
-    public static void MenuIndicadores(Votacao2021[] votacao) throws IOException {
-         int Opc=0;
+    public static void MenuIndicadores(Votacao2021[] votacao) {
+        int Opc=0;
         ClasseMetodos m = new ClasseMetodos() {};
+      
         while (Opc!=9)
         {
             Opc= Integer.parseInt(JOptionPane.showInputDialog("\nEstatísticas de Votação em 2021 \n 1 – Quantidade Eleitores por Seção \n 2 – Seção com Maior e Menor número de Eleitores \n 3 – Quantidade de votos por candidato \n 4 – 10 primeiros colocadas (nro cand. e qtd votos) \n9 – Finaliza consulta "));
@@ -66,9 +66,6 @@ public class Menu {
                 case 3:
                     m.QtVotosCandidato(votacao);
                     break;
-                case 4:
-                    m.MaisVotados(votacao);
-                    break;
                 case 9:
                     JOptionPane.showMessageDialog(null,"Finalizado");
                     break;
@@ -78,6 +75,10 @@ public class Menu {
         }
         
     }
+
+    
+
+   
 
     
 }
