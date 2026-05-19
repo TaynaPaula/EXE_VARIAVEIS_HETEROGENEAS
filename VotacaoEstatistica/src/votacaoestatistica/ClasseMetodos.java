@@ -52,7 +52,6 @@ public class ClasseMetodos {
     
     
     void QtEleitoresSecao(Votacao2021[] votacao)throws IOException {
-        //Quantidade de eleitores por Seção
         int[] eleitoresSecao = new int[11];
         for(int i=0; i<200; i++){
             eleitoresSecao[votacao[i].numeroSecao]++;
@@ -63,7 +62,6 @@ public class ClasseMetodos {
     }
 
     void SecaoMaiorMenor(Votacao2021[] votacao)throws IOException {
-        //Número da Seção com maior e menor números de eleitores (procedimento);
         int[] eleitoresPorsecao = new int[11];
         for(int i=0; i<votacao.length; i++){
           eleitoresPorsecao[votacao[i].numeroSecao]++;  
@@ -80,7 +78,6 @@ public class ClasseMetodos {
     }
 
      void QtVotosCandidato(Votacao2021[] votacao) {
-       //Quantidade de votos por candidato (procedimento);
        int[] contagem = new int[301];
        for(int i=0; i<200; i++){
            contagem[votacao[i].numeroCandidato]++;
@@ -93,14 +90,11 @@ public class ClasseMetodos {
     }
 
     void MaisVotados(Votacao2021[] votacao) {
-        //Exibir os 10 candidatos mais votados e suas quantidades
         int[] contagem = new int[301];
         for(int i = 0; i < 200; i++){
          contagem[votacao[i].numeroCandidato]++;
         }
-
-        // 2. Para não perder o número do candidato ao ordenar, 
-        // exibimos os 10 maiores valores encontrados manualmente ou via ordenação
+        
         System.out.println("\n--- 10 CANDIDATOS MAIS VOTADOS ---");
         for (int top = 0; top < 10; top++) {
             int maiorVoto = -1;
@@ -115,7 +109,7 @@ public class ClasseMetodos {
 
             if (maiorVoto > 0) {
                 System.out.println((top + 1) + "º Lugar: Candidato " + candMaisVotado + " com " + maiorVoto + " votos.");
-                contagem[candMaisVotado] = -1; // "Zera" para achar o próximo maior no próximo laço
+                contagem[candMaisVotado] = -1; 
             }
         }
     }

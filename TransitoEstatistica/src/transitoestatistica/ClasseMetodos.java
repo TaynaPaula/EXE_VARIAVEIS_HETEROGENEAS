@@ -16,12 +16,12 @@ class ClasseMetodos {
         int i; String fileName = "ArquivoEstatistica.txt";
         BufferedWriter gravar = new BufferedWriter(new FileWriter( fileName ));
         for(i=0;i<10;i++){
-        estatistica[i].CodigoCidade=Integer.parseInt(JOptionPane.showInputDialog("Entre o codigo da cidade"));
-        gravar.write(Integer.toString(estatistica[i].CodigoCidade)); gravar.newLine();
-        estatistica[i].NomeCidade=JOptionPane.showInputDialog("Informe o nome da cidade ");
-        gravar.write(estatistica[i].NomeCidade); gravar.newLine();
-        estatistica[i].QtdAcidentes=Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de acidentes "));
-        gravar.write(Integer.toString(estatistica[i].QtdAcidentes)); gravar.newLine();
+        estatistica[i].codigoCidade=Integer.parseInt(JOptionPane.showInputDialog("Entre o codigo da cidade"));
+        gravar.write(Integer.toString(estatistica[i].codigoCidade)); gravar.newLine();
+        estatistica[i].nomeCidade=JOptionPane.showInputDialog("Informe o nome da cidade ");
+        gravar.write(estatistica[i].nomeCidade); gravar.newLine();
+        estatistica[i].qtdAcidentes=Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de acidentes "));
+        gravar.write(Integer.toString(estatistica[i].qtdAcidentes)); gravar.newLine();
         }System.out.println("GRAVAÇÃO FEITA COM SUCESSO \n Estastisticas salvadas com sucesso ");
         System.out.println("-------------");
         gravar.close(); return estatistica;
@@ -30,9 +30,9 @@ class ClasseMetodos {
     public void PQTDACIDENTES(Estatistica[] estatistica){
       for (int i = 0 ; i < 10; i++) 
         {
-            if(estatistica[i].QtdAcidentes>100&&estatistica[i].QtdAcidentes<500){
-            System.out.println("\ncodigo:  "+estatistica[i].CodigoCidade + "\n pontos: "
-                + estatistica[i].NomeCidade +"\nAcidentes: "+ estatistica[i].QtdAcidentes);
+            if(estatistica[i].qtdAcidentes>100&&estatistica[i].qtdAcidentes<500){
+            System.out.println("\ncodigo:  "+estatistica[i].codigoCidade + "\n pontos: "
+                + estatistica[i].nomeCidade +"\nAcidentes: "+ estatistica[i].qtdAcidentes);
           }
         } System.out.println("-------------");
     }
@@ -42,15 +42,15 @@ class ClasseMetodos {
       int menor = 0;
       for (int i = 0; i < estatistica.length; i++) {
 
-        if (estatistica[i].QtdAcidentes > estatistica[maior].QtdAcidentes) {
+        if (estatistica[i].qtdAcidentes > estatistica[maior].qtdAcidentes) {
           maior = i;
         }
-        if (estatistica[i].QtdAcidentes < estatistica[menor].QtdAcidentes) {
+        if (estatistica[i].qtdAcidentes < estatistica[menor].qtdAcidentes) {
           menor = i;
         }
       }
-     System.out.println("\nCódigo: " + estatistica[maior].CodigoCidade + "Nome: " + estatistica[maior].NomeCidade + "Quantidade: " + estatistica[maior].QtdAcidentes);
-     System.out.println("\nCódigo: " + estatistica[menor].CodigoCidade + "Nome: " + estatistica[menor].NomeCidade + "Quantidade: " + estatistica[menor].QtdAcidentes);
+     System.out.println("\nCódigo: " + estatistica[maior].codigoCidade + "Nome: " + estatistica[maior].nomeCidade + "Quantidade: " + estatistica[maior].qtdAcidentes);
+     System.out.println("\nCódigo: " + estatistica[menor].codigoCidade + "Nome: " + estatistica[menor].nomeCidade + "Quantidade: " + estatistica[menor].qtdAcidentes);
      System.out.println("-------------");
     }
 
@@ -58,13 +58,13 @@ class ClasseMetodos {
      double soma = 0;
 
      for (int i = 0; i < estatistica.length; i++) {
-        soma += estatistica[i].QtdAcidentes;
+        soma += estatistica[i].qtdAcidentes;
      }
      double media = soma / estatistica.length;
      for (int i = 0; i < estatistica.length; i++) {
-        if (estatistica[i].QtdAcidentes > media) {
-          System.out.println("\n codigo:  " + estatistica[i].CodigoCidade + "\n pontos: "
-              + estatistica[i].NomeCidade + "\n Acidentes: " + estatistica[i].QtdAcidentes);
+        if (estatistica[i].qtdAcidentes > media) {
+          System.out.println("\n codigo:  " + estatistica[i].codigoCidade + "\n pontos: "
+              + estatistica[i].nomeCidade + "\n Acidentes: " + estatistica[i].qtdAcidentes);
           
         }
       }
@@ -80,9 +80,9 @@ class ClasseMetodos {
              estatistica[i] = new Estatistica() {};
         }
         for(i=0; i<10;i++){
-           estatistica[i].CodigoCidade = Integer.parseInt(ler.readLine()); 
-           estatistica[i].NomeCidade = ler.readLine();
-           estatistica[i].QtdAcidentes = Integer.parseInt(ler.readLine()); 
+           estatistica[i].codigoCidade = Integer.parseInt(ler.readLine()); 
+           estatistica[i].nomeCidade = ler.readLine();
+           estatistica[i].qtdAcidentes = Integer.parseInt(ler.readLine()); 
         }
         ler.close();
     }

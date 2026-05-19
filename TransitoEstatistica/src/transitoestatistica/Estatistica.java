@@ -9,18 +9,18 @@ package transitoestatistica;
  * @author Tayna
  */
 abstract class  Estatistica {
-    int CodigoCidade;
-    String NomeCidade;
-    int QtdAcidentes;
+    int codigoCidade;
+    String nomeCidade;
+    int qtdAcidentes;
 
     Estatistica() {
         this(0, "", 0);
     }
-    Estatistica(int CodigoCidadeestatistica,
-    String NomeCidadeestatistica,
-    int QtdAcidentesestatistica){
-       CodigoCidade = CodigoCidadeestatistica;
-       NomeCidade = NomeCidadeestatistica;
-       QtdAcidentes = QtdAcidentesestatistica;
+    Estatistica(int codigoCidadeestatistica,
+    String nomeCidadeestatistica,
+    int qtdAcidentesestatistica){
+       codigoCidade = codigoCidadeestatistica;
+       nomeCidade = nomeCidadeestatistica;
+       qtdAcidentes = qtdAcidentesestatistica;
     }
 }
