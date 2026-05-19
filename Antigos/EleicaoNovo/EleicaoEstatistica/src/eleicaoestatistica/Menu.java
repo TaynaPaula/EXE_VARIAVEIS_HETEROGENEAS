@@ -17,11 +17,18 @@ public class Menu {
      * @param args the command line arguments
      */    
     public static void main(String[] args) throws IOException {
+       Metodos m = new Metodos();
+        Eleitor  e = new Eleitor() {};
+        Eleitor[] eleitor = new Eleitor[10];
+        Votacao[] votacao = new Votacao[5];
+         for(int i = 0; i<200; i++){
+            eleitor[i] = new Eleitor() {};
+        }
+        
+         for(int i = 0; i<5; i++){
+            votacao[i] = new Votacao() {};
+        }
         int Opc=0;
-        Metodos m = new Metodos();
-        Eleitor e = new Eleitor();
-        Eleitor[] eleitor = new Eleitor[] {};
-        Votacao[] votacao = new Votacao[] {};
         while(Opc!=9){
             JOptionPane.showInputDialog("Menu Principal \n 1 - Cadastra Eleitor \n 1 - Cadastra Eleitor \n3 - Agrupa  Apuração \n 4 - Menu  Estatística \n 9 - Fim ");
             switch(Opc){
